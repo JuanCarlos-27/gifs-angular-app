@@ -1,0 +1,9 @@
+aside{
+    border-right: 3px solid #000;
+    background-color: #fff;
+    color:#000; 
+    overflow: auto;
+    position: fixed;
+    height: 100%;
+    min-width: 250px;
+}

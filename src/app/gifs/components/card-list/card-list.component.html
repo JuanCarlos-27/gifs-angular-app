@@ -1,0 +1,15 @@
+<section class="row mt-3">
+
+  <div class="col-12 text-center opacity-75" *ngIf="gifsList.length === 0">
+    <h3>No hay gifs para mostrar ☹️</h3>
+  </div>
+
+  <div class="col-md-3 col-sm-6 card-custom" *ngFor="let gif of gifsList">
+    <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+    <div class="card mb-2 text-center bg-dark">
+      <div class="card-body text-white">
+        <p class="card-text">{{gif.title}}</p>
+      </div>
+    </div>
+  </div>
+</section>

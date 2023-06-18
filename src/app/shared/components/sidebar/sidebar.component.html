@@ -1,0 +1,19 @@
+<aside class="border-right p-3" id="sidebar">
+  <h3 class="text-center">Gifs App</h3>
+  <hr/>
+
+  <div class="list-group list-reset">
+    <button 
+      class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+      *ngFor="let item of tagsHistory"
+      (click)="handleClickTag(item)"
+      >
+      {{ item | titlecase }}
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-history" width="16" height="16" viewBox="0 0 24 24" stroke-width="2.5" stroke="#444" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 8l0 4l2 2" />
+        <path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" />
+      </svg>
+    </button>
+  </div>
+</aside>

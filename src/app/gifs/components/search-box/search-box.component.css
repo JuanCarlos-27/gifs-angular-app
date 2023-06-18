@@ -1,0 +1,14 @@
+.form-control-custom{
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 3px solid #373737;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-control-custom:focus{
+    box-shadow: 0 0 4px #000;
+}

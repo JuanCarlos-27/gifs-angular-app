@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '03-gifs-app';
+  public title:string = '03-gifs-app';
 }
