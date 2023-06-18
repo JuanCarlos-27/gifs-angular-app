@@ -1,6 +1,7 @@
 .card-custom {
     display: grid;
     grid-template-rows: 200px 120px;
+    aspect-ratio: 1/2;
 }
 .card-body{
     justify-self: center;

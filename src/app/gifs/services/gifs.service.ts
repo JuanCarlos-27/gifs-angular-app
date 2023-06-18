@@ -10,6 +10,7 @@ const BASE_URL = 'https://api.giphy.com/v1/gifs/search';
 export class GifsService {
   private _tagsHistory: string[] = [];
   public gifList: Gif[] = [];
+  public isLoading: boolean = false;
 
   constructor(private http: HttpClient) {
     this.loadFromLocalStorage();
@@ -68,16 +69,19 @@ export class GifsService {
       .set('limit', 10)
       .set('q', tag);
 
+    this.isLoading = true;
     this.http
       .get<ISearchResponse>(`${BASE_URL}`, { params })
       .pipe(
         catchError((err): Observable<ISearchResponse> => {
           console.log(err);
+          this.isLoading = false;
           return err;
         })
       )
       .subscribe((res) => {
         this.gifList = res.data;
+        this.isLoading = false;
       });
 
     this.organizeHistory(tag);
